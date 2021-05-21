@@ -296,24 +296,28 @@ void setupProbes()
         {
           probe1TempCharacteristic->registerForNotify(notifyCallback);
           IGRILLLOGGER("  -- Probe 1 Setup!",1);
+          publishProbeTemp(1,-100); // Reset probe temp
         }
         probe2TempCharacteristic = iGrillService->getCharacteristic(PROBE2_TEMPERATURE);
         if(probe2TempCharacteristic->canNotify())
         {
           probe2TempCharacteristic->registerForNotify(notifyCallback);
           IGRILLLOGGER("  -- Probe 2 Setup!",1);
+          publishProbeTemp(2,-100); // Reset probe temp
         }
         probe3TempCharacteristic = iGrillService->getCharacteristic(PROBE3_TEMPERATURE);
         if(probe3TempCharacteristic->canNotify())
         {
           probe3TempCharacteristic->registerForNotify(notifyCallback);
           IGRILLLOGGER("  -- Probe 3 Setup!",1);
+          publishProbeTemp(3,-100); // Reset probe temp
         }
         probe4TempCharacteristic = iGrillService->getCharacteristic(PROBE4_TEMPERATURE);
         if(probe4TempCharacteristic->canNotify())
         {
           probe4TempCharacteristic->registerForNotify(notifyCallback);
           IGRILLLOGGER("  -- Probe 4 Setup!",1);
+          publishProbeTemp(4,-100); // Reset probe temp
         }
       }
       catch(...)
